@@ -1,0 +1,13 @@
+{
+  "name": "tc-counter",
+  "version": "0.0.1",
+  "homepage": "http://team-colonslash.eu/",
+  "authors": [
+    "Spike Himself <spikehimself@team-colonslash.eu>"
+  ],
+  "description": "Simple counter popup",
+  "resolutions": [
+    "720p"
+  ],
+  "license": "MIT"
+}

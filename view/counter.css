@@ -1,0 +1,42 @@
+/* ----- Alert ----- */
+
+#counter {
+    color: #f4f4f5;
+    background-color: #f4f4f5;
+    font-family: "AvenirLTStd-Medium",Helvetica,Arial,sans-serif;
+    font-size:20px;
+    line-height: 1.4em;
+    position:absolute;
+    top:25%;
+    right:0;
+    width: 0px;
+}
+
+#countertitle {
+    overflow:hidden;
+    color: #f4f4f5;
+    margin: 0.1em 0.1em 0.1em 1em;
+    vertical-align: middle;
+    text-shadow: 0 0 2px rgba(150,150,150,.5);
+}
+
+#countertitlecontainer {
+    overflow:hidden;
+    background-color: #ffcc28;
+    height: 1.5em;
+}
+
+#countervaluecontainer {
+    background-color: #f4f4f5;
+    overflow: hidden;
+    height: 0px;
+    color: black;
+}
+
+#countervalue {
+    overflow: hidden;
+    margin: 0.3em 1em;
+    line-height: 1.6em;
+    font-size: 18px;
+    text-align: center;
+}
