@@ -38,7 +38,7 @@ $('#tc-counter_decrement').click(function() {
     
     $('#tc-counter_value').val(counterValue);
 
-    nodecg.sendMessage('incrementCounter', {
+    nodecg.sendMessage('decrementCounter', {
         value: counterValue
     });
     

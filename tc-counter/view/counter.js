@@ -69,10 +69,11 @@ checkCounterValue();
 function setCounter (data) {
     if (!data.value) return;
     counterValue = data.value;
+    requestedValue = data.value;
 
     $('#countervalue').html(data.value);
     showCounter();
-    hidingTimerHandle = setTimeout(function() { hideCounter(); }, 6000);
+    setTimeoutHideCounter();
 }
 
 // Handle the incrementCounter message
@@ -80,6 +81,7 @@ function incrementCounter (data) {
     if (!data.value) return;
     if ( data.value > requestedValue ) {
         cancelHiding();
+        showCounter();
         requestedValue = data.value;
     }
 }
@@ -89,6 +91,7 @@ function decrementCounter (data) {
     if (!data.value) return;
     if ( data.value < requestedValue ) {
         cancelHiding();
+        showCounter();
         requestedValue = data.value;
     }
 
@@ -134,7 +137,7 @@ function processIncrementDecrement(isIncrement) {
             }
             else if (counterValue == requestedValue) {
                 isBusy = false;
-                hidingTimerHandle = setTimeout(function() { hideCounter(); }, 8000);
+                setTimeoutHideCounter();
             }
         });
     });
@@ -166,6 +169,10 @@ function cancelHiding() {
     if ( hidingTimerHandle != false ) {
         clearTimeout(hidingTimerHandle);
     }
+}
+
+function setTimeoutHideCounter() {
+    hidingTimerHandle = setTimeout(function() { hideCounter(); }, 6000);
 }
 
 // Take the whole thing off the screen
